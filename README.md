@@ -72,3 +72,38 @@ JWT — Authentication
 
 Swagger — API documentation and testing
 
+
+####### 
+#### API Documentation:
+
+#### API Url (apiUrl): http://localhost:8000/api-docs
+### User Registration
+    Url: {{apiUrl}}/register
+    Method: POST
+    Request Body:
+                {
+                "name": "Sumit Maharjan",
+                "email": "sumit@gmail.com",
+                "password": "sumit123"
+                }
+
+### User Login
+    Url: {{apiUrl}}/login
+    Method: POST
+    Request Body:
+                {
+                 "email": "sumit@gmail.com",
+                 "password": "sumit123"
+                }
+
+### User Logout
+    Url: {{apiUrl}}/logout
+    Method: POST
+    Headers: 
+        Authorization: Bearer <token>
+
+-------- Detail Api Testing in Swagger Api testing File ----
+
+
+
+
