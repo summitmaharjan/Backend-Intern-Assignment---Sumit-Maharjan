@@ -23,14 +23,17 @@ npm install
 
 ### 3️⃣ Setup Environment Variables
 ```bash
-PORT=5000
+PORT=8000
 MONGO_URI=your_mongodb_connection_string
-ACCESS_TOKEN_SECRET=your_jwt_secret
+ACCESS_TOKEN_SECRET=your_jwt_secret_token
 ```
 ### 4️⃣ Run the Server
 
 ```bash
 npm run dev
 ```
-
+Backend server should now be running at:
+```bash
+ http://localhost:5000
+```
 
