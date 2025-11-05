@@ -129,7 +129,7 @@ router.route("/getUser").get(verifyJWT, getCurrentUser);
 /**
  * @swagger
  * /user/updateUser:
- *   post:
+ *   put:
  *     summary: Update current user details
  *     tags: [Users]
  *     security:
@@ -149,6 +149,6 @@ router.route("/getUser").get(verifyJWT, getCurrentUser);
  *       200:
  *         description: User updated successfully
  */
-router.route("/updateUser").post(verifyJWT, updateUser);
+router.route("/updateUser").put(verifyJWT, updateUser);
 
 export default router;

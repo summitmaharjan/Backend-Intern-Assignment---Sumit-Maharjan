@@ -38,9 +38,6 @@ const router = Router();
  *               status: { type: string, enum: [Pending, In-Progress, Completed] }
  *               priority: { type: string, enum: [Low, Medium, High] }
  *               due_date: { type: string, format: date }
- *               labels:
- *                 type: array
- *                 items: { type: string }
  *     responses:
  *       201: { description: Task created successfully }
  */
@@ -127,9 +124,6 @@ router.get("/:id", verifyJWT, getTaskById);
  *               status: { type: string, enum: [Pending, In-Progress, Completed] }
  *               priority: { type: string, enum: [Low, Medium, High] }
  *               due_date: { type: string, format: date }
- *               labels:
- *                 type: array
- *                 items: { type: string }
  *     responses:
  *       200: { description: Task updated successfully }
  */

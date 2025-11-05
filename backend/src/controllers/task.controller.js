@@ -5,7 +5,7 @@ import { ApiPaginationResponse } from "../utils/ApiPaginationResponse.js";
 import { Task } from "../models/tasks.model.js";
 
 const createTask = asyncHandler(async (req, res) => {
-  const { title, description, status, priority, due_date, labels } = req.body;
+  const { title, description, status, priority, due_date } = req.body;
 
   if (!title) throw new ApiError(400, "Title is required");
 
@@ -15,7 +15,6 @@ const createTask = asyncHandler(async (req, res) => {
     status,
     priority,
     due_date,
-    labels,
     createdBy: req.user._id,
   });
 
@@ -24,11 +23,11 @@ const createTask = asyncHandler(async (req, res) => {
 
 const updateTask = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  const { title, description, dueDate, status, priority, labels } = req.body;
+  const { title, description, dueDate, status, priority } = req.body;
 
   const task = await Task.findOneAndUpdate(
     { _id: id, createdBy: req.user._id },
-    { title, description, dueDate, status, priority, labels },
+    { title, description, dueDate, status, priority },
     { new: true, runValidators: true }
   );
 
@@ -54,7 +53,6 @@ const getAllTask = asyncHandler(async (req, res) => {
   const sortOrder = sort === "desc" ? -1 : 1;
 
   const tasks = await Task.find(filterQuery)
-    .populate("labels")
     .sort({ due_date: sort ? sortOrder : 1 })
     .skip(skip)
     .limit(currentLimit);
@@ -93,7 +91,7 @@ const getTaskById = asyncHandler(async (req, res) => {
   const task = await Task.findOne({
     _id: id,
     createdBy: req.user._id,
-  }).populate("labels");
+  });
 
   if (!task) throw new ApiError(404, "Task not found");
 
