@@ -46,6 +46,8 @@ http://localhost:8000/api-docs
 ```
 There you can:
 🥇 View all available routes (Auth + Task APIs)
+
 🥈 See request and response examples
+
 🥉 Directly test the API endpoints in your browser
 
