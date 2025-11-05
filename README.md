@@ -14,4 +14,23 @@ Follow these steps to set up and run the project locally.
 git clone https://github.com/summitmaharjan/Backend-Intern-Assignment---Sumit-Maharjan.git
 cd Backend-Intern-Assignment---Sumit-Maharjan
 
+```
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Setup Environment Variables
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+ACCESS_TOKEN_SECRET=your_jwt_secret
+```
+### 4️⃣ Run the Server
+
+```bash
+npm run dev
+```
+
 
