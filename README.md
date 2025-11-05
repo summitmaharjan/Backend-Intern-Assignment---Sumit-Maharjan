@@ -34,6 +34,18 @@ npm run dev
 ```
 Backend server should now be running at:
 ```bash
- http://localhost:5000
+ http://localhost:8000
 ```
+API Documentation (Swagger)
+
+#### Swagger UI is integrated into this project to make testing APIs simple.
+
+Once the server is running, open your browser and visit:
+```bash
+http://localhost:8000/api-docs
+```
+There you can:
+🥇 View all available routes (Auth + Task APIs)
+🥈 See request and response examples
+🥉 Directly test the API endpoints in your browser
 
