@@ -12,7 +12,6 @@ Follow these steps to set up and run the project locally.
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/summitmaharjan/Backend-Intern-Assignment---Sumit-Maharjan.git
-cd Backend-Intern-Assignment---Sumit-Maharjan
 
 ```
 ### 2️⃣ Install Dependencies
