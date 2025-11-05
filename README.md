@@ -45,9 +45,30 @@ Once the server is running, open your browser and visit:
 http://localhost:8000/api-docs
 ```
 There you can:
+
 🥇 View all available routes (Auth + Task APIs)
 
 🥈 See request and response examples
 
 🥉 Directly test the API endpoints in your browser
+
+### 🔐 Authentication
+
+This API uses JWT (JSON Web Tokens) for secure authentication.
+Include your token in the request headers when accessing protected routes.
+
+Example:
+Authorization: Bearer <access_token>
+
+### 🧩 Tech Stack
+
+Node.js — Runtime environment
+
+Express.js — Web framework
+
+MongoDB (Mongoose) — Database
+
+JWT — Authentication
+
+Swagger — API documentation and testing
 
